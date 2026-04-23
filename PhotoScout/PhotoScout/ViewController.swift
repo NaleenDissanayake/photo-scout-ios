@@ -14,7 +14,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        testSearchService()
+        let vc = SearchPhotoCellPreviewVC()
+        navigationController?.pushViewController(vc, animated: true)
+        //testSearchService()
     }
 
     private func testSearchService() {
