@@ -6,14 +6,43 @@
 //
 
 import UIKit
+import RxSwift
 
 class ViewController: UIViewController {
-
+    private let disposeBag = DisposeBag()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        testSearchService()
     }
 
+    private func testSearchService() {
+        let requestBuilder = RequestBuilder(configuration: AppConfig(bundle: .main))
+
+        let apiClient = APIClient(requestBuilder: requestBuilder)
+        let searchService = PexelsSearchService(apiClient: apiClient)
+        
+        searchService
+            .searchPhotos(query: "Nature", page: 1, perPage: 10)
+            .subscribe(
+                onSuccess: { photos in
+                    print("Photo count: \(photos.count)")
+                    
+                    for photo in photos {
+                        print("""
+                            id: \(photo.id)
+                            photographer: \(photo.photographerName)
+                            size: \(photo.width)x\(photo.height)
+                            """)
+                    }
+                },
+                onFailure: { error in
+                    print("Error : \(error)")
+                }
+            )
+            .disposed(by: disposeBag)
+    }
 
 }
 
