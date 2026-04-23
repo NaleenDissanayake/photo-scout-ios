@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		4B687CD62F999BB1007888EF /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 4B687CD52F999BB1007888EF /* RxCocoa */; };
+		4B687CD82F999BB1007888EF /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4B687CD72F999BB1007888EF /* RxSwift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		4B687CB52F999684007888EF /* PhotoScout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoScout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -36,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B687CD82F999BB1007888EF /* RxSwift in Frameworks */,
+				4B687CD62F999BB1007888EF /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +53,7 @@
 			isa = PBXGroup;
 			children = (
 				4B687CB72F999684007888EF /* PhotoScout */,
+				4B687CD42F999BB1007888EF /* Frameworks */,
 				4B687CB62F999684007888EF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,6 +64,13 @@
 				4B687CB52F999684007888EF /* PhotoScout.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		4B687CD42F999BB1007888EF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -78,6 +93,8 @@
 			);
 			name = PhotoScout;
 			packageProductDependencies = (
+				4B687CD52F999BB1007888EF /* RxCocoa */,
+				4B687CD72F999BB1007888EF /* RxSwift */,
 			);
 			productName = PhotoScout;
 			productReference = 4B687CB52F999684007888EF /* PhotoScout.app */;
@@ -107,6 +124,9 @@
 			);
 			mainGroup = 4B687CAC2F999684007888EF;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				4B687CD32F999BA5007888EF /* XCRemoteSwiftPackageReference "rxswift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 4B687CB62F999684007888EF /* Products */;
 			projectDirPath = "";
@@ -355,6 +375,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4B687CD32F999BA5007888EF /* XCRemoteSwiftPackageReference "rxswift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/reactivex/rxswift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.10.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4B687CD52F999BB1007888EF /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4B687CD32F999BA5007888EF /* XCRemoteSwiftPackageReference "rxswift" */;
+			productName = RxCocoa;
+		};
+		4B687CD72F999BB1007888EF /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4B687CD32F999BA5007888EF /* XCRemoteSwiftPackageReference "rxswift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4B687CAD2F999684007888EF /* Project object */;
 }
