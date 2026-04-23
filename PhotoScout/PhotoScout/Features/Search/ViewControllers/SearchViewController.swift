@@ -105,7 +105,7 @@ private extension SearchViewController {
             collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
 
             messageLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            messageLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor),
+            messageLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -80),
             messageLabel.leadingAnchor.constraint(
                 greaterThanOrEqualTo: view.leadingAnchor,
                 constant: SearchUIConstants.horizontalInset
