@@ -24,6 +24,21 @@
             </objects>
             <point key="canvasLocation" x="1023.6641221374045" y="69.718309859154928"/>
         </scene>
+        <!--Photo Detail View Controller-->
+        <scene sceneID="v00-BG-3ow">
+            <objects>
+                <viewController storyboardIdentifier="PhotoDetailVC" id="GUM-pY-1Ul" customClass="PhotoDetailViewController" customModule="PhotoScout" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jCb-9V-3Bc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="zKu-Jf-WQt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JyS-gm-fkb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1873" y="70"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="CR4-Kd-Utj">
             <objects>
