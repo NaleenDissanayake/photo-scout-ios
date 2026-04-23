@@ -130,6 +130,7 @@ private extension SearchViewController {
         bindPhotos(output)
         bindLoading(output)
         bindMessage(output)
+        bindSelection(output)
         bindDeselection()
     }
 
@@ -168,6 +169,14 @@ private extension SearchViewController {
             })
             .disposed(by: disposeBag)
     }
+    
+    func bindSelection(_ output: SearchViewModel.Output) {
+        output.selectedPhoto
+            .emit(onNext: { [weak self] photo in
+                self?.showDetail(for: photo)
+            })
+            .disposed(by: disposeBag)
+    }
 
     func bindDeselection() {
         collectionView.rx.itemSelected
@@ -175,5 +184,34 @@ private extension SearchViewController {
                 self?.collectionView.deselectItem(at: indexPath, animated: true)
             })
             .disposed(by: disposeBag)
+    }
+}
+
+// MARK: - Navigation
+private extension SearchViewController {
+    func showDetail(for photo: Photo) {
+        if let dependencyContainer {
+            let viewController = dependencyContainer.makePhotoDetailViewController(
+                photo: photo
+            )
+            navigationController?.pushViewController(viewController, animated: true)
+            return
+        }
+
+        let detailViewController: PhotoDetailViewController
+        if let storyboard = storyboard,
+           let viewController = storyboard.instantiateViewController(
+                withIdentifier: PhotoDetailViewController.storyboardIdentifier
+           ) as? PhotoDetailViewController {
+            detailViewController = viewController
+        } else {
+            detailViewController = PhotoDetailViewController()
+        }
+
+        detailViewController.inject(
+            viewModel: PhotoDetailViewModel(photo: photo),
+            imageLoader: imageLoader
+        )
+        navigationController?.pushViewController(detailViewController, animated: true)
     }
 }
