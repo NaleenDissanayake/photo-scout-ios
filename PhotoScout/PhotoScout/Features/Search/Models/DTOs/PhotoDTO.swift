@@ -12,11 +12,14 @@ struct PhotoDTO: Decodable {
     let width: Int
     let height: Int
     let photographer: String
+    let src: PhotoSourceDTO
 
     func toDomain() -> Photo {
         Photo(
             id: id,
             photographerName: photographer,
+            thumbnailURL: URL(string: src.medium),
+            largeImageURL: URL(string: src.large2x),
             width: width,
             height: height
         )
