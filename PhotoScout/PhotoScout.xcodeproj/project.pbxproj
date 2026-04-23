@@ -160,6 +160,8 @@
 /* Begin XCBuildConfiguration section */
 		4B687CC92F999686007888EF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = 4B687CB72F999684007888EF /* PhotoScout */;
+			baseConfigurationReferenceRelativePath = App/Config/Debug.xcconfig;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -197,6 +199,8 @@
 		};
 		4B687CCA2F999686007888EF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = 4B687CB72F999684007888EF /* PhotoScout */;
+			baseConfigurationReferenceRelativePath = App/Config/Release.xcconfig;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
