@@ -6,8 +6,25 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		4B687CD62F999BB1007888EF /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 4B687CD52F999BB1007888EF /* RxCocoa */; };
+		4B687CD82F999BB1007888EF /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4B687CD72F999BB1007888EF /* RxSwift */; };
+		4B687D702F9A5018007888EF /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 4B687D6F2F9A5018007888EF /* RxBlocking */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4B687D582F9A4CB8007888EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4B687CAD2F999684007888EF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4B687CB42F999684007888EF;
+			remoteInfo = PhotoScout;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		4B687CB52F999684007888EF /* PhotoScout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoScout.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B687D542F9A4CB8007888EF /* PhotoScoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoScoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -29,10 +46,25 @@
 			path = PhotoScout;
 			sourceTree = "<group>";
 		};
+		4B687D552F9A4CB8007888EF /* PhotoScoutTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = PhotoScoutTests;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		4B687CB22F999684007888EF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B687CD82F999BB1007888EF /* RxSwift in Frameworks */,
+				4B687D702F9A5018007888EF /* RxBlocking in Frameworks */,
+				4B687CD62F999BB1007888EF /* RxCocoa in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B687D512F9A4CB8007888EF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -46,6 +78,8 @@
 			isa = PBXGroup;
 			children = (
 				4B687CB72F999684007888EF /* PhotoScout */,
+				4B687D552F9A4CB8007888EF /* PhotoScoutTests */,
+				4B687CD42F999BB1007888EF /* Frameworks */,
 				4B687CB62F999684007888EF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,8 +88,16 @@
 			isa = PBXGroup;
 			children = (
 				4B687CB52F999684007888EF /* PhotoScout.app */,
+				4B687D542F9A4CB8007888EF /* PhotoScoutTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		4B687CD42F999BB1007888EF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -78,10 +120,36 @@
 			);
 			name = PhotoScout;
 			packageProductDependencies = (
+				4B687CD52F999BB1007888EF /* RxCocoa */,
+				4B687CD72F999BB1007888EF /* RxSwift */,
+				4B687D6F2F9A5018007888EF /* RxBlocking */,
 			);
 			productName = PhotoScout;
 			productReference = 4B687CB52F999684007888EF /* PhotoScout.app */;
 			productType = "com.apple.product-type.application";
+		};
+		4B687D532F9A4CB8007888EF /* PhotoScoutTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4B687D5A2F9A4CB8007888EF /* Build configuration list for PBXNativeTarget "PhotoScoutTests" */;
+			buildPhases = (
+				4B687D502F9A4CB8007888EF /* Sources */,
+				4B687D512F9A4CB8007888EF /* Frameworks */,
+				4B687D522F9A4CB8007888EF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4B687D592F9A4CB8007888EF /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				4B687D552F9A4CB8007888EF /* PhotoScoutTests */,
+			);
+			name = PhotoScoutTests;
+			packageProductDependencies = (
+			);
+			productName = PhotoScoutTests;
+			productReference = 4B687D542F9A4CB8007888EF /* PhotoScoutTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -96,6 +164,10 @@
 					4B687CB42F999684007888EF = {
 						CreatedOnToolsVersion = 26.2;
 					};
+					4B687D532F9A4CB8007888EF = {
+						CreatedOnToolsVersion = 26.2;
+						TestTargetID = 4B687CB42F999684007888EF;
+					};
 				};
 			};
 			buildConfigurationList = 4B687CB02F999684007888EF /* Build configuration list for PBXProject "PhotoScout" */;
@@ -107,18 +179,29 @@
 			);
 			mainGroup = 4B687CAC2F999684007888EF;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				4B687CD32F999BA5007888EF /* XCRemoteSwiftPackageReference "rxswift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 4B687CB62F999684007888EF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				4B687CB42F999684007888EF /* PhotoScout */,
+				4B687D532F9A4CB8007888EF /* PhotoScoutTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		4B687CB32F999684007888EF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4B687D522F9A4CB8007888EF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -135,11 +218,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4B687D502F9A4CB8007888EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4B687D592F9A4CB8007888EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4B687CB42F999684007888EF /* PhotoScout */;
+			targetProxy = 4B687D582F9A4CB8007888EF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		4B687CC92F999686007888EF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = 4B687CB72F999684007888EF /* PhotoScout */;
+			baseConfigurationReferenceRelativePath = App/Config/Debug.xcconfig;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -177,6 +277,8 @@
 		};
 		4B687CCA2F999686007888EF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReferenceAnchor = 4B687CB72F999684007888EF /* PhotoScout */;
+			baseConfigurationReferenceRelativePath = App/Config/Release.xcconfig;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -333,6 +435,58 @@
 			};
 			name = Release;
 		};
+		4B687D5B2F9A4CB8007888EF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZQHTGY6RQB;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nkd.PhotoScoutTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhotoScout.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PhotoScout";
+			};
+			name = Debug;
+		};
+		4B687D5C2F9A4CB8007888EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZQHTGY6RQB;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nkd.PhotoScoutTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PhotoScout.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PhotoScout";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -354,7 +508,45 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		4B687D5A2F9A4CB8007888EF /* Build configuration list for PBXNativeTarget "PhotoScoutTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4B687D5B2F9A4CB8007888EF /* Debug */,
+				4B687D5C2F9A4CB8007888EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4B687CD32F999BA5007888EF /* XCRemoteSwiftPackageReference "rxswift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/reactivex/rxswift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.10.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4B687CD52F999BB1007888EF /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4B687CD32F999BA5007888EF /* XCRemoteSwiftPackageReference "rxswift" */;
+			productName = RxCocoa;
+		};
+		4B687CD72F999BB1007888EF /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4B687CD32F999BA5007888EF /* XCRemoteSwiftPackageReference "rxswift" */;
+			productName = RxSwift;
+		};
+		4B687D6F2F9A5018007888EF /* RxBlocking */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4B687CD32F999BA5007888EF /* XCRemoteSwiftPackageReference "rxswift" */;
+			productName = RxBlocking;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4B687CAD2F999684007888EF /* Project object */;
 }

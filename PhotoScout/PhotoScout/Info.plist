@@ -21,5 +21,9 @@
 			</array>
 		</dict>
 	</dict>
+    <key>PEXELS_API_KEY</key>
+    <string>$(PEXELS_API_KEY)</string>
+    <key>PEXELS_BASE_URL</key>
+    <string>https://api.pexels.com</string>
 </dict>
 </plist>

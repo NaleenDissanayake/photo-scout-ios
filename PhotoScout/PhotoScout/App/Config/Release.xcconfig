@@ -1,0 +1,10 @@
+//
+//  Release.xcconfig
+//  PhotoScout
+//
+//  Created by Naleen Dissanayake on 2026/04/23.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://developer.apple.com/documentation/xcode/adding-a-build-configuration-file-to-your-project
+PEXELS_API_KEY = Please Enter Production Key Here
